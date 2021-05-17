@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBox = ({ searchTerm, onSearchChange }) => {
+const SearchBox = ({ onSearchChange }) => {
 
   return (
     <div className='pa2'>
