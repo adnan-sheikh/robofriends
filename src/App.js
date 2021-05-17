@@ -19,7 +19,7 @@ class App extends Component {
       .then((users) => this.setState({ robots: users }));
   }
 
-  handleChange = ({ target }) => {
+  handleSearchChange = ({ target }) => {
     this.setState({ searchField: target.value });
   };
 
@@ -39,7 +39,7 @@ class App extends Component {
         <h1 className='f1'>RoboFriends</h1>
         <SearchBox
           value={this.state.searchField}
-          onSearchChange={this.handleChange}
+          onSearchChange={this.handleSearchChange}
         />
         <Scroll>
           <CardList robots={filteredRobots} />
