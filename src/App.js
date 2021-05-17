@@ -12,8 +12,8 @@ class App extends Component {
     };
   }
 
-  handleChange = (event) => {
-    this.setState({ searchField: event.target.value });
+  handleChange = ({ target }) => {
+    this.setState({ searchField: target.value });
   };
 
   render() {
@@ -26,7 +26,10 @@ class App extends Component {
     return (
       <div className='tc'>
         <h1>RoboFriends</h1>
-        <SearchBox onSearchChange={this.handleChange} />
+        <SearchBox
+          value={this.state.searchField}
+          onSearchChange={this.handleChange}
+        />
         <CardList robots={filteredRobots} />
       </div>
     );
