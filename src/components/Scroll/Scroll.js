@@ -3,7 +3,7 @@ import './Scroll.css';
 
 const Scroll = ({ children }) => {
   return (
-    <div
+    <div className='scroll'
       style={{
         overflowY: 'scroll',
         height: '800px',
